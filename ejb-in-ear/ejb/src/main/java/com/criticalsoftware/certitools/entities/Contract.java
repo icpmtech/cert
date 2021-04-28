@@ -113,7 +113,7 @@ public class Contract implements Serializable, Comparable<Contract> {
     private String menuLabel;
 
     @ManyToOne(optional = false)
-    private java.lang.Module module;
+    private Module module;
 
     @OneToMany(mappedBy = "contract", fetch = FetchType.LAZY)
     private Collection<UserContract> userContract;
@@ -147,7 +147,7 @@ public class Contract implements Serializable, Comparable<Contract> {
     public Contract() {
     }
 
-    public Contract(long id, String number, String contractDesignation, java.lang.Module module) {
+    public Contract(long id, String number, String contractDesignation, Module module) {
         this.id = id;
         this.number = number;
         this.contractDesignation = contractDesignation;
@@ -378,11 +378,11 @@ public class Contract implements Serializable, Comparable<Contract> {
         this.userRegisterDomains = userRegisterDomains;
     }
 
-    public java.lang.Module getModule() {
+    public Module getModule() {
         return module;
     }
 
-    public void setModule(java.lang.Module module) {
+    public void setModule(Module module) {
         this.module = module;
     }
 

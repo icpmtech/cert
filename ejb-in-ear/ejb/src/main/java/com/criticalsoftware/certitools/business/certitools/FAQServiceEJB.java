@@ -165,7 +165,7 @@ public class FAQServiceEJB implements FAQService {
 
         List<ModuleType> modulesAllow = faqService.findUserModulesAllowed(userId);
 
-        if (!modulesAllow.contains(newFaq.getFaqCategory().getModule().getModuleType())) {
+        if (!modulesAllow.contains(  newFaq.getFaqCategory().getModule().getModuleType())) {
             throw new CertitoolsAuthorizationException("User is trying to update FAQ in a unauthorized module");
         }
 

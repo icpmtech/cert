@@ -37,7 +37,7 @@ public class FAQCategory {
     private String name;
 
     @ManyToOne(optional = false)
-    private java.lang.Module module;
+    private Module module;
 
     @OneToMany(mappedBy = "faqCategory", fetch = FetchType.LAZY)
     private Collection<FAQ> faqs;
@@ -58,11 +58,11 @@ public class FAQCategory {
         this.name = name;
     }
 
-    public java.lang.Module getModule() {
+    public Module getModule() {
         return module;
     }
 
-    public void setModule(java.lang.Module module) {
+    public void setModule(Module module) {
         this.module = module;
     }
 
