@@ -41,7 +41,7 @@ import java.util.List;
 
 @Stateless
 @Local(FAQService.class)
-@LocalBinding(jndiBinding = "certitools/FAQService")
+@LocalBinding(jndiBinding = "java:/app/certitools/FAQService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class FAQServiceEJB implements FAQService {

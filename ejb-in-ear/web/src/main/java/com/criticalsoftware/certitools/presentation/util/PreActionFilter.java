@@ -66,7 +66,7 @@ public class PreActionFilter implements Filter {
             Principal principal = ((HttpServletRequest) request).getUserPrincipal();
 
             LOGGER.debug("Principal = " + SecurityAssociation.getPrincipal());
-            LOGGER.debug("Caller Principal = " + SecurityAssociation.getCallerPrincipal());
+          //  LOGGER.debug("Caller Principal = " + SecurityAssociation.getCallerPrincipal());
 
             User user = (User) ((HttpServletRequest) request).getSession().getAttribute("user");
             boolean firstLogin = false;

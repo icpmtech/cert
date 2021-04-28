@@ -42,7 +42,129 @@
     </licenses>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.lowagie/itext -->
         <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext</artifactId>
+            <version> 4.2.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.fckeditor/java-core -->
+        <dependency>
+            <groupId>net.fckeditor</groupId>
+            <artifactId>java-core</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.samaxes.cachefilter/cachefilter -->
+        <dependency>
+            <groupId>com.samaxes.cachefilter</groupId>
+            <artifactId>cachefilter</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.tuckey/urlrewritefilter -->
+        <dependency>
+            <groupId>org.tuckey</groupId>
+            <artifactId>urlrewritefilter</artifactId>
+            <version>4.0.4</version>
+        </dependency>
+
+
+
+        <!-- https://mvnrepository.com/artifact/displaytag/displaytag -->
+        <dependency>
+            <groupId>displaytag</groupId>
+            <artifactId>displaytag</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.stripes/stripes -->
+        <dependency>
+            <groupId>net.sourceforge.stripes</groupId>
+            <artifactId>stripes</artifactId>
+            <version>1.7.0-async-beta</version>
+        </dependency>
+        <dependency>
+            <groupId>com.stripes</groupId>
+            <artifactId>stripes-security</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/stripes-security-1.4.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.itext</groupId>
+            <artifactId>itext-certitools</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/iText-2.1.6-certitools.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextrtf</groupId>
+            <artifactId>itextrtf-certitools</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/itext-rtf-2.1.7.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-certitools</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/aspose.words.jdk16-7.0.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.htmlcleaner</groupId>
+            <artifactId>htmlcleaner-certitools</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/htmlcleaner-2.24.jar</systemPath>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sitemesh</groupId>
+            <artifactId>sitemesh-certitools</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/sitemesh-2.4.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose21-certitools</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/aspose-words-21.4-jdk16.jar</systemPath>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.4</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.samaxes.stripejb3</groupId>
+            <artifactId>stripejb3</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
@@ -104,11 +226,6 @@
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <version>2.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.lowagie</groupId>
-            <artifactId>itext</artifactId>
-            <version>4.2.2</version>
         </dependency>
         <dependency>
             <groupId>com.stripe</groupId>

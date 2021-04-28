@@ -9,11 +9,11 @@
     <display-name>Certitools</display-name>
 
     <listener>
-        <listener-class>com.com.criticalsoftware.certitools.presentation.util.ContextListener</listener-class>
+        <listener-class>com.criticalsoftware.certitools.presentation.util.ContextListener</listener-class>
     </listener>
 
     <listener>
-        <listener-class>com.com.criticalsoftware.certitools.presentation.util.SessionListener</listener-class>
+        <listener-class>com.criticalsoftware.certitools.presentation.util.SessionListener</listener-class>
     </listener>
 
     <context-param>
@@ -28,12 +28,12 @@
 
     <filter>
         <filter-name>PreActionFilter</filter-name>
-        <filter-class>com.com.criticalsoftware.certitools.presentation.util.PreActionFilter</filter-class>
+        <filter-class>com.criticalsoftware.certitools.presentation.util.PreActionFilter</filter-class>
     </filter>
 
     <filter>
         <filter-name>UTF8Filter</filter-name>
-        <filter-class>com.com.criticalsoftware.certitools.presentation.util.UTF8Filter</filter-class>
+        <filter-class>com.criticalsoftware.certitools.presentation.util.UTF8Filter</filter-class>
     </filter>
 
     <filter>
@@ -54,7 +54,7 @@
         </init-param>
         <init-param>
             <param-name>SecurityManager.Class</param-name>
-            <param-value>com.com.criticalsoftware.certitools.presentation.util.DefaultSecurityManager</param-value>
+            <param-value>com.criticalsoftware.certitools.presentation.util.DefaultSecurityManager</param-value>
         </init-param>
         <init-param>
             <param-name>Stripes.EncryptionKey</param-name>
@@ -66,11 +66,11 @@
         </init-param>
         <init-param>
             <param-name>ActionBeanContext.Class</param-name>
-            <param-value>com.com.criticalsoftware.certitools.presentation.util.CertitoolsActionBeanContext</param-value>
+            <param-value>com.criticalsoftware.certitools.presentation.util.CertitoolsActionBeanContext</param-value>
         </init-param>
         <init-param>
             <param-name>LocalePicker.Class</param-name>
-            <param-value>com.com.criticalsoftware.certitools.presentation.util.LocalePicker</param-value>
+            <param-value>com.criticalsoftware.certitools.presentation.util.LocalePicker</param-value>
         </init-param>
         <init-param>
             <param-name>LocalePicker.Locales</param-name>
@@ -78,7 +78,7 @@
         </init-param>
         <init-param>
             <param-name>LocalizationBundleFactory.Class</param-name>
-            <param-value>com.com.criticalsoftware.certitools.presentation.util.CertitoolsLocalizationBundleFactory
+            <param-value>com.criticalsoftware.certitools.presentation.util.CertitoolsLocalizationBundleFactory
             </param-value>
         </init-param>
         <init-param>
@@ -95,8 +95,8 @@
         </init-param>
         <init-param>
             <param-name>Interceptor.Classes</param-name>
-            <param-value>com.com.criticalsoftware.certitools.presentation.util.CertitoolsSecurityInterceptor,
-                com.com.criticalsoftware.certitools.presentation.util.DefaultInterceptor,
+            <param-value>com.criticalsoftware.certitools.presentation.util.CertitoolsSecurityInterceptor,
+                com.criticalsoftware.certitools.presentation.util.DefaultInterceptor,
                 com.samaxes.stripejb3.EJBInterceptor
             </param-value>
         </init-param>
@@ -147,7 +147,7 @@
 
     <filter>
         <filter-name>SWFFilter</filter-name>
-        <filter-class>com.com.criticalsoftware.certitools.presentation.util.SWFFilter</filter-class>
+        <filter-class>com.criticalsoftware.certitools.presentation.util.SWFFilter</filter-class>
     </filter>
 
 

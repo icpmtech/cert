@@ -13,12 +13,11 @@
 package com.criticalsoftware.certitools.presentation.util;
 
 import com.criticalsoftware.certitools.entities.LegalDocument;
-import org.displaytag.decorator.TableDecorator;
+import net.sourceforge.stripes.localization.LocalizationUtility;
 import org.apache.commons.lang.StringEscapeUtils;
+import org.displaytag.decorator.TableDecorator;
 
 import java.util.Locale;
-
-import net.sourceforge.stripes.localization.LocalizationUtility;
 
 /**
  * Deocrator for Legislation Export
@@ -88,7 +87,7 @@ public class LegalDocumentExportDecorator extends TableDecorator {
         if (this.getCurrentRowObject() instanceof LegalDocument) {
             LegalDocument legaDocument = (LegalDocument) this.getCurrentRowObject();
             if (legaDocument.getSummary() != null && !legaDocument.getSummary().isEmpty()) {
-                String stripString = com.criticalsoftware.certitools.presentation.util.Utils.stripTags(legaDocument.getSummary());
+                String stripString = com.criticalsoftware.certitools.util.Utils.stripTags(legaDocument.getSummary());
                 return StringEscapeUtils.unescapeHtml(stripString);
             }
         }
@@ -99,7 +98,7 @@ public class LegalDocumentExportDecorator extends TableDecorator {
         if (this.getCurrentRowObject() instanceof LegalDocument) {
             LegalDocument legaDocument = (LegalDocument) this.getCurrentRowObject();
             if (legaDocument.getCustomAbstract() != null && !legaDocument.getCustomAbstract().isEmpty()) {
-                String stripString = com.criticalsoftware.certitools.presentation.util.Utils.stripTags(legaDocument.getCustomAbstract());
+                String stripString =com.criticalsoftware.certitools.util.Utils.stripTags(legaDocument.getCustomAbstract());
                 return StringEscapeUtils.unescapeHtml(stripString);
             }
         }
@@ -134,7 +133,7 @@ public class LegalDocumentExportDecorator extends TableDecorator {
             LegalDocument legalDocument = (LegalDocument) this.getCurrentRowObject();
             if (legalDocument.getReferenceArticles() != null && !legalDocument.getReferenceArticles()
                     .isEmpty()) {
-                String stripString = Utils.stripTags(legalDocument.getReferenceArticles());
+                String stripString = com.criticalsoftware.certitools.presentation.util.Utils.stripTags(legalDocument.getReferenceArticles());
                 return StringEscapeUtils.unescapeHtml(stripString);
             }
         }

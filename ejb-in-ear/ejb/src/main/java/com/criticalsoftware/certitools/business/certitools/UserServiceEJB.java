@@ -1290,7 +1290,7 @@ public class UserServiceEJB implements UserService {
         }
     }
 
-    public static int daysBetween(Calendar startDate, Calendar endDate) {
+    public  int daysBetween(Calendar startDate, Calendar endDate) {
         Calendar date = (Calendar) startDate.clone();
         int daysBetween = 0;
         while (date.before(endDate)) {

@@ -38,7 +38,7 @@ import java.util.Map;
  */
 @Stateless
 @Local(ConfigurationService.class)
-@LocalBinding(jndiBinding = "certitools/ConfigurationService")
+@LocalBinding(jndiBinding = "java:/app/certitools/ConfigurationService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class ConfigurationServiceEJB implements ConfigurationService {

@@ -38,7 +38,7 @@ import java.util.Arrays;
  */
 @Stateless
 @Local(HelpService.class)
-@LocalBinding(jndiBinding = "certitools/HelpService")
+@LocalBinding(jndiBinding = "java:/app/certitools/HelpService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class HelpServiceEJB implements HelpService {

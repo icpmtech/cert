@@ -34,7 +34,7 @@ import java.util.List;
 
 @Stateless
 @Local(MonitorService.class)
-@LocalBinding(jndiBinding = "certitools/MonitorService")
+@LocalBinding(jndiBinding = "java:/app/certitools/MonitorService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("legislationmanager")
 public class MonitorServiceEJB implements MonitorService {

@@ -360,9 +360,9 @@ public class PlanCMOperationsActionBean extends AbstractActionBean implements Va
         //Update current folder
         nodeUpdated = insertFolderWithTemplate().get(0);
 
-        String rootPath = com.criticalsoftware.certitools.util.PlanUtils.findRootPath(nodeUpdated.getPath());
+        String rootPath = com.criticalsoftware.certitools.presentation.util.PlanUtils.findRootPath(nodeUpdated.getPath());
         boolean applyBoldToFolders;
-        if (rootPath.equals(com.criticalsoftware.certitools.util.PlanUtils.getParentPath(nodeUpdated.getPath()))) {
+        if (rootPath.equals(PlanUtils.getParentPath(nodeUpdated.getPath()))) {
             /* Parent is a root so get first level folders*/
             nodes = planService.findOfflineSectionsForMenu(getUserInSession(), rootPath, getModuleTypeFromEnum());
             applyBoldToFolders = true;

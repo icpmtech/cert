@@ -38,7 +38,7 @@ import java.util.Calendar;
 
 @Stateless
 @Local(UserChangePassNotificationTimerService.class)
-@LocalBinding(jndiBinding = "certitools/UserChangePassNotificationTimerService")
+@LocalBinding(jndiBinding = "java:/app/certitools/UserChangePassNotificationTimerService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class UserChangePassNotificationTimerServiceEJB implements UserChangePassNotificationTimerService {

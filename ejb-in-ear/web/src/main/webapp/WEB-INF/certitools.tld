@@ -15,7 +15,7 @@
     <tag>
         <description>Tag to Escape Value</description>
         <name>escape</name>
-        <tag-class>com.com.criticalsoftware.certitools.presentation.tag.EscapeTag</tag-class>
+        <tag-class>com.criticalsoftware.certitools.presentation.tag.EscapeTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>Value to escape</description>

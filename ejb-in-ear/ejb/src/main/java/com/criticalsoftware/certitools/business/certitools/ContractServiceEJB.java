@@ -15,6 +15,7 @@ package com.criticalsoftware.certitools.business.certitools;
 import com.criticalsoftware.certitools.business.exception.*;
 import com.criticalsoftware.certitools.business.exception.ObjectNotFoundException;
 import com.criticalsoftware.certitools.entities.*;
+import com.criticalsoftware.certitools.entities.Module;
 import com.criticalsoftware.certitools.entities.jcr.Plan;
 import com.criticalsoftware.certitools.entities.sm.SubModule;
 import com.criticalsoftware.certitools.persistence.plan.PermissionDAO;
@@ -43,7 +44,7 @@ import java.util.*;
 @SuppressWarnings("UnusedDeclaration")
 @Stateless
 @Local(ContractService.class)
-@LocalBinding(jndiBinding = "certitools/ContractService")
+@LocalBinding(jndiBinding = "java:/app/certitools/ContractService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class ContractServiceEJB implements ContractService {

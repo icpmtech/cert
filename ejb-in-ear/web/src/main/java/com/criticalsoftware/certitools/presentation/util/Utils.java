@@ -87,4 +87,16 @@ public class Utils {
         }
         return label;
     }
+
+    /**
+     * Strip tags from string
+     *
+     * @param HTMLString - string to strip
+     *
+     * @return - string
+     */
+    public static String stripTags(String HTMLString) {
+        return HTMLString.replaceAll("\\<.*?>", "");
+    }
+
 }

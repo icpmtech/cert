@@ -12,19 +12,13 @@
  */
 package com.criticalsoftware.certitools.business.certitools;
 
+import com.criticalsoftware.certitools.entities.Module;
 import com.criticalsoftware.certitools.persistence.certitools.ModuleDAO;
 import org.jboss.annotation.ejb.LocalBinding;
 import org.jboss.annotation.security.SecurityDomain;
 
 import javax.annotation.security.RunAs;
-import javax.ejb.Local;
-import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
-import javax.ejb.EJB;
-
-import com.criticalsoftware.certitools.entities.Module;
-
+import javax.ejb.*;
 import java.util.Collection;
 
 /**
@@ -35,7 +29,7 @@ import java.util.Collection;
 
 @Stateless
 @Local(ModuleService.class)
-@LocalBinding(jndiBinding = "certitools/ModuleService")
+@LocalBinding(jndiBinding = "java:/app/certitools/ModuleService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class ModuleServiceEJB implements ModuleService {

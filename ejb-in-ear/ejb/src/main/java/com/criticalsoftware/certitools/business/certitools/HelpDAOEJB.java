@@ -33,7 +33,7 @@ import java.util.List;
  */
 @Stateless
 @Local(HelpDAO.class)
-@LocalBinding(jndiBinding = "certitools/HelpDAO")
+@LocalBinding(jndiBinding = "java:/app/certitools/HelpDAO")
 @RolesAllowed("private")
 @TransactionAttribute(TransactionAttributeType.SUPPORTS)
 public class HelpDAOEJB extends GenericDAOEJB<HelpSearchableContent, Long> implements HelpDAO {

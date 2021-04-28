@@ -61,7 +61,7 @@ public  class Template5ContactsDataSource implements IMailMergeDataSource {
         return true;
     }
 
-    @Override
+
     public boolean getValue(String s, Ref<Object> ref) throws Exception {
         return false;
     }

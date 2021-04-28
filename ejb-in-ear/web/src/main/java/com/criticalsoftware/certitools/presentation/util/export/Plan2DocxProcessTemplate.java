@@ -151,7 +151,7 @@ public class Plan2DocxProcessTemplate {
         }
 
         // get all old paragraphs
-        /*
+
         ArrayList<Node> oldParagraphs = new ArrayList<Node>();
         if (Configuration.getInstance().getDocxExportApplyAligmnentParagraphsFix()) {
             oldParagraphs = new ArrayList<Node>();
@@ -159,7 +159,7 @@ public class Plan2DocxProcessTemplate {
                     Arrays.asList(documentBuilder.getDocument().getChildNodes(NodeType.PARAGRAPH, true).toArray());
             oldParagraphs.addAll(oldList2);
         }
-        */
+
 
         try {
             // find all certitools images to "break" the text in parts
@@ -210,29 +210,29 @@ public class Plan2DocxProcessTemplate {
                     currentTables.remove(oldTable);
                 }
 
-                /*
+
                 Style style = documentBuilder.getDocument().getStyles().add(StyleType.PARAGRAPH, "mystyle");
                 style.getParagraphFormat().setLeftIndent(0);
-                style.setBaseStyle("Normal");
+               // style.setBaseStyle("Normal");
 
                 Style style1 = documentBuilder.getDocument().getStyles().get("Normal Tables");
-                */
+
                 // Center new tables
                 if (currentTables.size() > 0) {
                     for (Node currentTable : currentTables) {
                         Table table = (Table) currentTable;
 
-                        /*
+
                         NodeCollection nodeCollection = table.getChildNodes(NodeType.PARAGRAPH, true, true);
                         for (Object o : nodeCollection) {
                             Paragraph p = (Paragraph) o;
                             //p.getParagraphFormat().setStyle(style1);
                             System.out.println("found p || " + p);
                         }
-                        */
+
 
                         // insert paragraph after tables
-                        // table.getParentNode().insertAfter(new Paragraph(documentBuilder.getDocument()), table);
+                         table.getParentNode().insertAfter(new Paragraph(documentBuilder.getDocument()), table);
 
                         // repeat header across pages
                         if (table.getRows().getCount() >= 1 &&
@@ -245,20 +245,20 @@ public class Plan2DocxProcessTemplate {
 
                         // center table
                         //old Fix
-                        //for (int j = 0; j < table.getRows().getCount(); j++) {
-                        //    Row row = table.getRows().get(j);
+                        for (int j = 0; j < table.getRows().getCount(); j++) {
+                          Row row = table.getRows().get(j);
 
-                         //   row.getRowFormat().setAlignment(RowAlignment.CENTER);
-                        //}
+                           row.getRowFormat().setAlignment(RowAlignment.CENTER);
+                        }
                         // center table new fix
-                        table.setAlignment(TableAlignment.CENTER);
+                       // table.setAlignment(TableAlignment.CENTER);
 
                     }
                 }
             }
 
             // to force paragraph alignment
-            /*
+
             try{
             if (Configuration.getInstance().getDocxExportApplyAligmnentParagraphsFix()) {
                 ArrayList<Node> currentParagraphs = new ArrayList<Node>();
@@ -288,7 +288,7 @@ public class Plan2DocxProcessTemplate {
                 LOGGER.error("Problem applying paragraph alignments");
                 LOGGER.error(e);
             }
-            */
+
 
         } catch (Exception e) {
             throw new AsposeException("Error inserting html on template rich text. Folder: " + folder.getPath());
@@ -331,7 +331,7 @@ public class Plan2DocxProcessTemplate {
         }
         transformations.addTransformation(aTransformation);
         transformations.addTransformation(fontTransformation);
-        htmlCleaner.setTransformations(transformations);
+       // htmlCleaner.setTransformations(transformations);
 
         // Remove hr and style tags AND inner content
         CleanerProperties properties = htmlCleaner.getProperties();
@@ -408,9 +408,9 @@ public class Plan2DocxProcessTemplate {
                     }
                 }
                 // if child is just text, add it
-                if (currentChildObject instanceof ContentToken) {
-                    newLiNode.addChild(currentChildObject);
-                }
+               // if (currentChildObject instanceof ContentToken) {
+                   // newLiNode.addChild(currentChildObject);
+                //}
 
             }
             newLiNode.addChildren(newLiNodeContentList);

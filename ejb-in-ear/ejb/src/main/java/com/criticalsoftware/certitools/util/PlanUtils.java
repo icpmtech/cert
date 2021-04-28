@@ -188,4 +188,25 @@ public class PlanUtils {
         }
         return null;
     }
+
+    /**
+     * Finds path parent path ex: path=/certitools_pei_root/PEI12/offline/Organograna returns
+     * /certitools_pei_root/PEI12
+     *
+     * @param path - path
+     * @return - parent root path
+     *
+     * @throws BusinessException - path is invalid
+     */
+    public static String findRootPath(String path) throws BusinessException {
+        if (path != null) {
+            String[] split = path.split("/");
+
+            if (split.length <= 2) {
+                throw new BusinessException("Invalid path");
+            }
+            return "/" + split[1] + "/" + split[2];
+        }
+        return null;
+    }
 }

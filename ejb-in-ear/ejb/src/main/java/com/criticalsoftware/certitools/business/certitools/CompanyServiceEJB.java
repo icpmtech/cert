@@ -45,7 +45,7 @@ import java.util.List;
 
 @Stateless
 @Local(CompanyService.class)
-@LocalBinding(jndiBinding = "certitools/CompanyService")
+@LocalBinding(jndiBinding = "java:global/ejb-in-ear/ejb-in-ear-ejb/CompanyService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class CompanyServiceEJB implements CompanyService {

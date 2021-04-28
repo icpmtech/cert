@@ -34,6 +34,7 @@ public class CertitoolsLoginModule extends DatabaseServerLoginModule {
         ResultSet rs = null;
 
         Transaction tx = null;
+        boolean suspendResume = false;
         if (suspendResume) {
             tx = TransactionDemarcationSupport.suspendAnyTransaction();
             if (trace) {
@@ -41,6 +42,7 @@ public class CertitoolsLoginModule extends DatabaseServerLoginModule {
             }
         }
 
+        String dsJndiName = new String();
         try {
             String[] temp = getUsernameAndPassword();
             String tempPassword = temp[1];
@@ -49,6 +51,7 @@ public class CertitoolsLoginModule extends DatabaseServerLoginModule {
             DataSource ds = (DataSource) ctx.lookup(dsJndiName);
             conn = ds.getConnection();
             // Get the password
+            String principalsQuery = new String();
             if (trace) {
                 log.trace("Excuting query: " + principalsQuery + ", with username: " + username);
             }

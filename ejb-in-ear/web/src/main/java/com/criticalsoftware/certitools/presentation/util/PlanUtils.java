@@ -31,6 +31,7 @@ import java.util.StringTokenizer;
 public class PlanUtils {
 
     public static final String ROOT_PLAN_FOLDER = "certitools_plan_root";
+    public static final String IMAGE_MEDIA_TYPES = "";
 
     public static String getOnlineOfflineFromPath(String path) throws BusinessException {
         if (path != null) {
