@@ -174,7 +174,7 @@ public class UserContract {
         boolean canAccess = false;
 
         if (moduleType != null) {
-            java.lang.Module module = new java.lang.Module(moduleType);
+           Module module = new Module(moduleType);
             if (!this.getContract().getModule().equals(module)) {
                 return false;
             }

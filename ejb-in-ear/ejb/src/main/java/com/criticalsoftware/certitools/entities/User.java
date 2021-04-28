@@ -12,6 +12,8 @@
  */
 package com.criticalsoftware.certitools.entities;
 
+import com.criticalsoftware.certitools.util.ModuleType;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Calendar;
@@ -397,7 +399,7 @@ public class User implements Serializable {
             return false;
         }
 
-        java.lang.Module module = new java.lang.Module(moduleType);
+        Module module = new Module(moduleType);
 
         boolean canAccess = false;
 
