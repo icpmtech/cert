@@ -30,7 +30,7 @@ import java.util.Calendar;
  */
 @Stateless
 @Local(NewsletterTimerService.class)
-@LocalBinding(jndiBinding = "certitools/NewletterTimerService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/NewletterTimerService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class NewsletterTimerServiceEJB implements NewsletterTimerService {

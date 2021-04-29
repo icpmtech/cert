@@ -29,7 +29,7 @@ import java.util.Collection;
 
 @Stateless
 @Local(ModuleService.class)
-@LocalBinding(jndiBinding = "java:/app/certitools/ModuleService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/ModuleService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class ModuleServiceEJB implements ModuleService {

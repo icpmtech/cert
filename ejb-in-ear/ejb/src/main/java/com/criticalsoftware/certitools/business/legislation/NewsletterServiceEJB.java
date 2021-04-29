@@ -42,7 +42,7 @@ import java.util.*;
  */
 @Stateless
 @Local(NewsletterService.class)
-@LocalBinding(jndiBinding = "certitools/NewsletterService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/NewsletterService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class NewsletterServiceEJB implements NewsletterService {

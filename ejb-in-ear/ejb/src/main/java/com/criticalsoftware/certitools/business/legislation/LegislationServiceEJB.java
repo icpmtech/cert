@@ -69,7 +69,7 @@ import java.util.Set;
  */
 @Stateless
 @Local(LegislationService.class)
-@LocalBinding(jndiBinding = "certitools/LegislationService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/LegislationService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class LegislationServiceEJB implements LegislationService {
