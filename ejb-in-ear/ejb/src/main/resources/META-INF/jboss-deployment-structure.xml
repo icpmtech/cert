@@ -3,5 +3,11 @@
         <exclusions>
             <module name="org.hibernate" slot="main" />
         </exclusions>
+        <dependencies>
+            <!-- These are equivalent to the "Dependencies: javax.jcr ..." line in the MANIFEST.MF -->
+            <module name="javax.jcr" />
+            <module name="org.modeshape.jcr.api" services="import" />
+            <module name="org.modeshape" services="import" />
+        </dependencies>
     </deployment>
 </jboss-deployment-structure>

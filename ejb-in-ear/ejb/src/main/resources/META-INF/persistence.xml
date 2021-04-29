@@ -4,7 +4,7 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
     <persistence-unit name="certitoolsEntityManager" transaction-type="JTA">
-        <jta-data-source>java:/CertiToolsDS</jta-data-source>
+        <jta-data-source>java:jboss/datasources/CertiToolsDS</jta-data-source>
 
         <class>com.criticalsoftware.certitools.entities.User</class>
         <class>com.criticalsoftware.certitools.entities.Role</class>
