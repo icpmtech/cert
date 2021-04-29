@@ -35,7 +35,7 @@ import java.util.List;
  */
 @Stateless
 @Local(NewsService.class)
-@LocalBinding(jndiBinding = "NewsService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/NewsService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class NewsServiceEJB implements NewsService {

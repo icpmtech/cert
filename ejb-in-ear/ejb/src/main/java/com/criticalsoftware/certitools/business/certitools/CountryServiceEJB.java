@@ -29,7 +29,7 @@ import java.util.Collection;
  */
 @Stateless
 @Local(CountryService.class)
-@LocalBinding(jndiBinding = "java:/app/certitools/CountryService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejbCountryService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class CountryServiceEJB implements CountryService {

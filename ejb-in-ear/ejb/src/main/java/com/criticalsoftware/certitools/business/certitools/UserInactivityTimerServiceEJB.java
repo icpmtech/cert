@@ -39,7 +39,7 @@ import java.util.Calendar;
 
 @Stateless
 @Local(UserInactivityTimerService.class)
-@LocalBinding(jndiBinding = "java:/app/certitools/UserInactivityTimerService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/UserInactivityTimerService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class UserInactivityTimerServiceEJB implements UserInactivityTimerService {

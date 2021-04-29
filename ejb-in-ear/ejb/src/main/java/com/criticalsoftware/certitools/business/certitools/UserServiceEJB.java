@@ -42,7 +42,7 @@ import static com.criticalsoftware.certitools.business.exception.ObjectNotFoundE
  */
 @Stateless
 @Local(UserService.class)
-@LocalBinding(jndiBinding = "certitools/UserService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/UserService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class UserServiceEJB implements UserService {

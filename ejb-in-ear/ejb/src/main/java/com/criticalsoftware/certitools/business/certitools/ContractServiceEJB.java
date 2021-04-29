@@ -44,7 +44,7 @@ import java.util.*;
 @SuppressWarnings("UnusedDeclaration")
 @Stateless
 @Local(ContractService.class)
-@LocalBinding(jndiBinding = "java:/app/certitools/ContractService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/ContractService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class ContractServiceEJB implements ContractService {
