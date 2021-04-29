@@ -38,7 +38,7 @@ import java.util.Set;
 
 @Stateless
 @Local(LegalDocumentHistoryService.class)
-@LocalBinding(jndiBinding = "certitools/LegalDocumentHistoryService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/LegalDocumentHistoryService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class LegalDocumentHistoryServiceEJB implements LegalDocumentHistoryService {

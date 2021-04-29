@@ -38,7 +38,7 @@ import java.util.Date;
 
 @Stateless
 @Local(LegalDocumentStatisticsService.class)
-@LocalBinding(jndiBinding = "certitools/LegalDocumentStatisticsService")
+@LocalBinding(jndiBinding = "ejb-in-ear-ejb/LegalDocumentStatisticsService")
 @SecurityDomain("CertiToolsRealm")
 @RunAs("private")
 public class LegalDocumentStatisticsServiceEJB implements LegalDocumentStatisticsService {
